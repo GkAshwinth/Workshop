@@ -1,0 +1,40 @@
+{
+    "Processors": [
+      { "id": "cpu1", "name": "AMD Ryzen 7 5700G Processor", "price": 450, "img": "Sem2/AMD Ryzen 7 5700G Processor.jpg" },
+      { "id": "cpu2", "name": "AMD Ryzen 7 3800X Processor", "price": 350, "img": "Sem2/AMD Ryzen 7 3800X Processor.jpg" },
+      { "id": "cpu3", "name": "AMD Ryzen 7 5800X Processor", "price": 320, "img": "Sem2/AMD Ryzen 7 5800X Processor.jpg" },
+      { "id": "cpu4", "name": "Intel Core i5-13400 Processor", "price": 250, "img": "Sem2/Intel Core i5-13400 Processor.jpg" },
+      { "id": "cpu5", "name": "Intel Core i9-12900K Processor", "price": 200, "img": "Sem2/Intel Core i9-12900K Processor.jpg" },
+      { "id": "cpu6", "name": "Intel Core i9-13900K", "price": 200, "img": "Sem2/Intel Core i9-13900K.jpg" }
+    ],
+    "Graphic Cards": [
+      { "id": "gpu1", "name": "NVIDIA RTX 4090", "price": 1600, "img": "img/rtx4090.jpg" },
+      { "id": "gpu2", "name": "NVIDIA RTX 4080", "price": 1200, "img": "img/rtx4080.jpg" },
+      { "id": "gpu3", "name": "AMD RX 7900", "price": 1100, "img": "img/rx7900.jpg" },
+      { "id": "gpu4", "name": "NVIDIA RTX 4070", "price": 900, "img": "img/rtx4070.jpg" },
+      { "id": "gpu5", "name": "AMD RX 6800", "price": 750, "img": "img/rx6800.jpg" },
+      { "id": "gpu6", "name": "NVIDIA GTX 1660", "price": 300, "img": "img/gtx1660.jpg" }
+    ],
+    "Motherboards": [
+      { "id": "mb1", "name": "ASUS ROG Strix", "price": 300, "img": "img/asus-rog.jpg" },
+      { "id": "mb2", "name": "MSI MPG Z690", "price": 280, "img": "img/msi-z690.jpg" },
+      { "id": "mb3", "name": "Gigabyte AORUS", "price": 270, "img": "img/aorus.jpg" },
+      { "id": "mb4", "name": "ASRock B550", "price": 200, "img": "img/asrock.jpg" },
+      { "id": "mb5", "name": "Biostar B450", "price": 150, "img": "img/biostar.jpg" },
+      { "id": "mb6", "name": "Intel H610", "price": 100, "img": "img/intel-h610.jpg" }
+    ],
+    "Memory (RAM)": [
+      { "id": "ram1", "name": "Corsair 16GB DDR4", "price": 80, "img": "img/corsair.jpg" },
+      { "id": "ram2", "name": "G.SKILL 16GB DDR4", "price": 85, "img": "img/gskill.jpg" },
+      { "id": "ram3", "name": "Kingston 8GB DDR4", "price": 45, "img": "img/kingston.jpg" },
+      { "id": "ram4", "name": "Crucial 16GB DDR4", "price": 75, "img": "img/crucial.jpg" }
+    ],
+    "Storage Devices": [
+      { "id": "ssd1", "name": "Samsung 1TB SSD", "price": 100, "img": "img/samsung.jpg" },
+      { "id": "ssd2", "name": "WD Blue 1TB SSD", "price": 90, "img": "img/wd.jpg" },
+      { "id": "ssd3", "name": "Seagate 2TB HDD", "price": 80, "img": "img/seagate.jpg" },
+      { "id": "ssd4", "name": "Kingston 500GB SSD", "price": 60, "img": "img/kingston-ssd.jpg" },
+      { "id": "ssd5", "name": "Crucial 1TB SSD", "price": 95, "img": "img/crucial-ssd.jpg" },
+      { "id": "ssd6", "name": "WD Black 2TB NVMe", "price": 180, "img": "img/wd-black.jpg" }
+    ]
+  }

@@ -1,0 +1,118 @@
+.checkout_main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+}
+
+.checkout_back_btn {
+    background-color: #34495e;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.checkout_order_summary {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.checkout_total {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #e1e8f0;
+    text-align: right;
+    font-size: 1.2em;
+}
+
+.checkout_form {
+    display: grid;
+    gap: 30px;
+}
+
+.checkout_section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.checkout_field {
+    margin-bottom: 15px;
+}
+
+.checkout_field label {
+    display: block;
+    margin-bottom: 5px;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.checkout_field input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.checkout_row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.checkout_btn_pay {
+    background-color: #2ecc71;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+.checkout_modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.checkout_modal_content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+.checkout_btn_return {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .checkout_main {
+        grid-template-columns: 1fr;
+    }
+    
+    .checkout_row {
+        grid-template-columns: 1fr;
+    }
+}

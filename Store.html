@@ -1,85 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GK Vanguard - Premium Computer Hardware</title>
+  <link rel="stylesheet" href="Styles/styles1.css">
+  <link rel="stylesheet" href="Styles/style.css">
+  <link rel="stylesheet" href="styles/products.css">
+  <link rel="stylesheet" href="techstore.css">
+  <header>
+    <nav class="container">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GK Vanguard</title>
+        <!-- Below tags are for when the website enters mobile/tablet views where a Hamburger Menu will be deployed. By default hidden -->
+        <img src="./Favicon/apple-icon-152x152.png" alt="Logo for GK Vanguard" class="logo hamburger">
+        <h1 class="hamburger">GK Vanguard</h1>              
 
+            <!-- Use of checkbox to initiate hamburger menu, Label has been acquired through google -->
+        <input type="checkbox" id="check">
+        <label for="check">☰</label>
 
-    <link rel="stylesheet" href="Styles\styles1.css">
-    <link rel="manifest" href="./Favicon/manifest.json">
+        <!-- Below content in a div section are for when the website is in Desktop view and is hidden inside a menu when in mobile/tablet view -->
+        <div class="list_container">
+            <a href="index.html" target="_self" id="ham_logo">
+                <img src="./Favicon/apple-icon-152x152.png" alt="Logo for GK Vanguard" class="logo">
+        </a>
 
+            <a href="index.html" target="_self" id="Home_link">Home Page</a>
+            <a href="Aboutus.html" target="_self">About Us</a>
+            <a href="UpcomingGames.html" target="_self">Upcoming Games</a>  
+            <a href="Consolesandgamingperipherals.html" target="_self">Consoles and Gaming Peripherals</a>   
+            <a href="Games.html" target="_self">Games</a>   
+            <a href="Support.html" target="_self">Support</a>  
+            <a href="Store.html" target="_self">Store</a>
 
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-   
+        </div>
 
-</head>
-<body>
-
-<!-- HEADER SECTION START-->
-
-    <header>
-        <nav class="container">
-
-            
-
-            <!-- Below content in a div section are for when the website is in Desktop view and is hidden inside a menu when in mobile/tablet view -->
-            <div class="list_container">
-                <a href="index.html" target="_self" id="ham_logo">
-                    <img src="./Favicon/apple-icon-152x152.png" alt="Logo for GK Vanguard" class="logo">
-            </a>
-
-                <a href="index.html" target="_self" id="Home_link">Home Page</a>
-                <a href="Aboutus.html" target="_self">About Us</a>
-                <a href="UpcomingGames.html" target="_self">Upcoming Games</a>  
-                <a href="Consolesandgamingperipherals.html" target="_self">Consoles and Gaming Peripherals</a>   
-                <a href="Games.html" target="_self">Games</a>   
-                <a href="Support.html" target="_self">Support</a>  
-                <a href="Store.html" target="_self">Store</a>
-
-            </div>
-
-        </nav>
-    </header>
-<!-- HEADER SECTION END-->
+    </nav>
+</header>
 
 <body>
-  <div class="product-container">
-    <div class="card">
-      <img src="/Images/CS2.jpg" alt="Product 1" />
-      <h3>Product 1</h3>
-      <p>2,000</p>
-      <button>Add To Card</button>
-    </div>
-    <div class="card">
-      <img src="/Images/apex.jpg" alt="Product 2" />
-      <h3>Product 2</h3>
-      <p>2,200</p>
-      <button>Add To Card</button>
-    </div>
-    <div class="card">
-      <img src="/Images/FC 25.webp" alt="Product 3" />
-      <h3>Product 3</h3>
-      <p>2,400</p>
-      <button>Add To Card</button>
-    </div>
+  <div class="techstore_wrapper">
+      <header class="techstore_header">
+          <h1>TechGear Hub</h1>
+          <div class="techstore_cart_summary">
+              <p>Items in cart: <span id="cartCount">0</span></p>
+              <p>Total: $<span id="cartTotal">0.00</span></p>
+          </div>
+      </header>
+
+      <main class="techstore_main">
+          <div class="techstore_products" id="productsContainer"></div>
+
+          <div class="techstore_cart">
+              <h2>Your Cart</h2>
+              <table class="techstore_cart_table">
+                  <thead>
+                      <tr>
+                          <th>Item</th>
+                          <th>Quantity</th>
+                          <th>Price</th>
+                          <th>Total</th>
+                      </tr>
+                  </thead>
+                  <tbody id="cartItems"></tbody>
+                  <tfoot>
+                      <tr>
+                          <td colspan="3">Total:</td>
+                          <td id="cartTableTotal">$0.00</td>
+                      </tr>
+                  </tfoot>
+              </table>
+
+              <div class="techstore_actions">
+                  <button class="techstore_btn_favorite" id="saveToFavorites">Save as Favorite</button>
+                  <button class="techstore_btn_apply" id="applyFavorites">Apply Favorites</button>
+                  <button class="techstore_btn_buy" id="buyNow">Buy Now</button>
+              </div>
+          </div>
+      </main>
   </div>
+
+  <script type="module" src="techstore.js"></script>
 </body>
 </html>
