@@ -2,31 +2,31 @@
     "processors": [
       {
         "id": "cpu-1",
-        "name": "TechPro X5000",
+        "name": "AMD Ryzen 7 3800X Processor0",
         "description": "8-core processor, 4.5GHz speed",
         "price": 299.99,
         "image": "Sem2/AMD Ryzen 7 3800X Processor.jpg"
       },
       {
         "id": "cpu-2",
-        "name": "QuickCore 3600",
+        "name": "AMD Ryzen 7 5700G Processor",
         "description": "6-core processor, 4.2GHz speed",
         "price": 199.99,
-        "image": "https://images.pexels.com/photos/1432675/pexels-photo-1432675.jpeg"
+        "image": "Sem2/AMD Ryzen 7 5700G Processor.jpg"
       },
       {
         "id": "cpu-3",
-        "name": "PowerMax 7200",
+        "name": "AMD Ryzen 7 5800X Processor",
         "description": "12-core processor, 5.0GHz speed",
         "price": 399.99,
-        "image": "https://images.pexels.com/photos/1432675/pexels-photo-1432675.jpeg"
+        "image": "Sem2/AMD Ryzen 7 5800X Processor.jpg"
       },
       {
         "id": "cpu-4",
-        "name": "SpeedMaster Pro",
+        "name": "Intel Core i5-13400 Processor",
         "description": "10-core processor, 4.8GHz speed",
         "price": 349.99,
-        "image": "https://images.pexels.com/photos/1432675/pexels-photo-1432675.jpeg"
+        "image": "Sem2/Intel Core i5-13400 Processor.jpg"
       },
       {
         "id": "cpu-5",
