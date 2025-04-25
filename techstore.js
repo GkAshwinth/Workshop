@@ -60,6 +60,9 @@ function setupEventListeners() {
     document.getElementById('saveToFavorites').addEventListener('click', saveFavorites);
     document.getElementById('applyFavorites').addEventListener('click', applyFavorites);
     document.getElementById('buyNow').addEventListener('click', proceedToCheckout);
+    
+    // Clear Cart button
+    document.getElementById('clearCart').addEventListener('click', clearCart);
 }
 
 // <-------- Handle all click-based interactions (like + and -) -------->
@@ -183,6 +186,17 @@ function proceedToCheckout() {
     // Save checkout data and move to the next page
     localStorage.setItem('techstore_checkout', JSON.stringify({ items, total }));
     window.location.href = 'checkout.html';
+}
+
+// <-------- Clear all items in the cart -------->
+function clearCart() {
+    // Reset all quantity inputs to 0
+    document.querySelectorAll('.techstore_product_card').forEach(card => {
+        card.querySelector('.techstore_quantity_input').value = 0;
+    });
+    
+    // Update the cart display to reflect the cleared cart
+    updateCart(); // This will reset the cart display and totals
 }
 
 // <-------- Fire everything off when the DOM is ready -------->
