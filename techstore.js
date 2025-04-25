@@ -1,16 +1,16 @@
-// Load products and initialize the store
+// <-------- Load products and initialize the store when the page loads -------->
 async function initStore() {
     try {
         const response = await fetch('products.json');
         const products = await response.json();
-        displayProducts(products);
-        setupEventListeners();
+        displayProducts(products); // Show all products on the page
+        setupEventListeners();    // Set up all event handlers
     } catch (error) {
         console.error('Error loading products:', error);
     }
 }
 
-// Display products in the store
+// <-------- Create and display all product sections dynamically -------->
 function displayProducts(products) {
     const container = document.getElementById('productsContainer');
     
@@ -25,16 +25,16 @@ function displayProducts(products) {
             </div>
         `;
         
-        container.appendChild(section);
+        container.appendChild(section); // Add this section to the page
     }
 }
 
-// Format category name for display
+// <-------- Format category names like "graphicsCards" → "Graphics Cards" -------->
 function formatCategoryName(category) {
     return category.replace(/([A-Z])/g, ' $1').trim();
 }
 
-// Create HTML for a product card
+// <-------- Return HTML for a single product card -------->
 function createProductCard(product) {
     return `
         <div class="techstore_product_card" data-id="${product.id}">
@@ -51,40 +51,42 @@ function createProductCard(product) {
     `;
 }
 
-// Set up event listeners
+// <-------- Hook up all the main buttons and input events -------->
 function setupEventListeners() {
-    document.addEventListener('click', handleClick);
-    document.addEventListener('change', handleChange);
-    
+    document.addEventListener('click', handleClick);       // For +/- buttons
+    document.addEventListener('change', handleChange);     // For manual quantity edits
+
+    // Buttons for saving, applying favorites, and checking out
     document.getElementById('saveToFavorites').addEventListener('click', saveFavorites);
     document.getElementById('applyFavorites').addEventListener('click', applyFavorites);
     document.getElementById('buyNow').addEventListener('click', proceedToCheckout);
 }
 
-// Handle click events
+// <-------- Handle all click-based interactions (like + and -) -------->
 function handleClick(event) {
     if (event.target.classList.contains('techstore_quantity_btn')) {
         const input = event.target.parentElement.querySelector('.techstore_quantity_input');
         const currentValue = parseInt(input.value) || 0;
         
+        // Increase or decrease quantity
         if (event.target.classList.contains('plus')) {
             input.value = currentValue + 1;
         } else if (event.target.classList.contains('minus') && currentValue > 0) {
             input.value = currentValue - 1;
         }
         
-        updateCart();
+        updateCart(); // Refresh cart data
     }
 }
 
-// Handle input changes
+// <-------- Handle changes made directly in quantity input fields -------->
 function handleChange(event) {
     if (event.target.classList.contains('techstore_quantity_input')) {
         updateCart();
     }
 }
 
-// Update cart totals
+// <-------- Update cart item list and totals based on current selections -------->
 function updateCart() {
     const items = [];
     let total = 0;
@@ -92,7 +94,7 @@ function updateCart() {
     document.querySelectorAll('.techstore_product_card').forEach(card => {
         const quantity = parseInt(card.querySelector('.techstore_quantity_input').value) || 0;
         if (quantity > 0) {
-            const price = parseFloat(card.querySelector('.techstore_product_price').textContent.replace('$', ''));
+            const price = parseFloat(card.querySelector('.techstore_product_price').textContent.replace(/[^\d.]/g, ''));
             const itemTotal = price * quantity;
             total += itemTotal;
             
@@ -105,16 +107,17 @@ function updateCart() {
         }
     });
     
-    updateCartDisplay(items, total);
+    updateCartDisplay(items, total); // Update the visual cart
 }
 
-// Update cart display
+// <-------- Render the cart table and update total displays -------->
 function updateCartDisplay(items, total) {
     const cartItems = document.getElementById('cartItems');
     const cartCount = document.getElementById('cartCount');
     const cartTotal = document.getElementById('cartTotal');
     const cartTableTotal = document.getElementById('cartTableTotal');
     
+    // Fill the table with selected items
     cartItems.innerHTML = items.map(item => `
         <tr>
             <td>${item.name}</td>
@@ -124,13 +127,13 @@ function updateCartDisplay(items, total) {
         </tr>
     `).join('');
     
+    // Update cart summary info
     cartCount.textContent = items.reduce((sum, item) => sum + item.quantity, 0);
     cartTotal.textContent = `LKR ${total.toFixed(2)}`; 
     cartTableTotal.textContent = `LKR ${total.toFixed(2)}`;
-    
 }
 
-// Save cart as favorites
+// <-------- Save the current cart as the user's "Favorite" -------->
 function saveFavorites() {
     const favorites = {};
     document.querySelectorAll('.techstore_product_card').forEach(card => {
@@ -143,17 +146,17 @@ function saveFavorites() {
     alert('Order saved to favorites!');
 }
 
-// Apply favorites to cart
+// <-------- Load saved favorites into the cart -------->
 function applyFavorites() {
     const favorites = JSON.parse(localStorage.getItem('techstore_favorites') || '{}');
     document.querySelectorAll('.techstore_product_card').forEach(card => {
         const quantity = favorites[card.dataset.id] || 0;
         card.querySelector('.techstore_quantity_input').value = quantity;
     });
-    updateCart();
+    updateCart(); // Refresh cart with restored data
 }
 
-// Proceed to checkout
+// <-------- Validate and prepare the cart for checkout -------->
 function proceedToCheckout() {
     const items = [];
     let total = 0;
@@ -177,10 +180,10 @@ function proceedToCheckout() {
         return;
     }
     
-    // Store cart data for checkout page
+    // Save checkout data and move to the next page
     localStorage.setItem('techstore_checkout', JSON.stringify({ items, total }));
     window.location.href = 'checkout.html';
 }
 
-// Initialize the store when the page loads
+// <-------- Fire everything off when the DOM is ready -------->
 document.addEventListener('DOMContentLoaded', initStore);
