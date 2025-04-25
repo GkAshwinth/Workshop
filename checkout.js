@@ -11,15 +11,18 @@ function displayCheckoutItems(data) {
     const container = document.getElementById('checkoutItems');
     const totalElement = document.getElementById('checkoutTotal');
 
+    console.log("Checkout data:", data);
+
     if (data.items && data.items.length > 0) {
         container.innerHTML = data.items.map(item => `
             <div class="checkout_item">
                 <p>${item.name} x ${item.quantity}</p>
-                <p>$${item.total.toFixed(2)}</p>
+                <p>LKR ${item.total?.toFixed(2) || '0.00'}</p>
             </div>
         `).join('');
-        
-        totalElement.textContent = data.total.toFixed(2);
+
+        const total = parseFloat(data.total);
+        totalElement.textContent = isNaN(total) ? 'LKR 0.00' : `LKR ${total.toFixed(2)}`;
     } else {
         window.location.href = 'store.html';
     }

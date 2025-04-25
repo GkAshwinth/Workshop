@@ -151,3 +151,89 @@
     background-color: #e74c3c;
     color: white;
 }
+
+@media screen and (max-width: 1024px) {
+    .techstore_main {
+      grid-template-columns: 1fr; /* Stack products and cart vertically */
+    }
+  
+    .techstore_cart {
+      margin-top: 30px;
+    }
+  
+    .techstore_product_grid {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  
+    .techstore_actions {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+  
+  /* --------- Mobile (Up to 767px) --------- */
+  @media screen and (max-width: 767px) {
+    .techstore_wrapper {
+      padding: 10px;
+    }
+  
+    .techstore_main {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  
+    .techstore_product_grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .techstore_product_card {
+      padding: 10px;
+    }
+  
+    .techstore_product_image {
+      height: 180px;
+    }
+  
+    .techstore_quantity_control {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+    }
+  
+    .techstore_actions {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .techstore_cart_table th,
+    .techstore_cart_table td {
+      font-size: 0.9em;
+      padding: 8px;
+    }
+  }
+  
+  /* ---------  (above 1200px) --------- */
+  @media screen and (min-width: 1201px) {
+    .techstore_wrapper {
+      padding: 40px;
+    }
+  
+    .techstore_product_grid {
+      gap: 30px;
+    }
+  
+    .techstore_product_card {
+      padding: 20px;
+    }
+  
+    .techstore_quantity_input {
+      width: 60px;
+    }
+  
+    .techstore_btn_favorite,
+    .techstore_btn_apply,
+    .techstore_btn_buy {
+      padding: 12px 24px;
+      font-size: 1rem;
+    }
+  }

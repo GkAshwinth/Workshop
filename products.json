@@ -4,42 +4,42 @@
         "id": "cpu-1",
         "name": "AMD Ryzen 7 3800X Processor0",
         "description": "8-core processor, 4.5GHz speed",
-        "price": 299.99,
+        "price": 75000,
         "image": "Sem2/AMD Ryzen 7 3800X Processor.jpg"
       },
       {
         "id": "cpu-2",
         "name": "AMD Ryzen 7 5700G Processor",
         "description": "6-core processor, 4.2GHz speed",
-        "price": 199.99,
+        "price": 50000,
         "image": "Sem2/AMD Ryzen 7 5700G Processor.jpg"
       },
       {
         "id": "cpu-3",
         "name": "AMD Ryzen 7 5800X Processor",
         "description": "12-core processor, 5.0GHz speed",
-        "price": 399.99,
+        "price": 20000,
         "image": "Sem2/AMD Ryzen 7 5800X Processor.jpg"
       },
       {
         "id": "cpu-4",
         "name": "Intel Core i5-13400 Processor",
         "description": "10-core processor, 4.8GHz speed",
-        "price": 349.99,
+        "price": 10000,
         "image": "Sem2/Intel Core i5-13400 Processor.jpg"
       },
       {
         "id": "cpu-5",
         "name": "Intel Core i9-12900K Processor",
         "description": "16-core processor, 5.2GHz speed",
-        "price": 499.99,
+        "price": 30000,
         "image": "Sem2/Intel Core i9-12900K Processor.jpg"
       },
       {
         "id": "cpu-6",
         "name": "Intel Core i9-13900K",
         "description": "4-core processor, 3.8GHz speed",
-        "price": 149.99,
+        "price": 35000,
         "image": "Sem2/Intel Core i9-13900K.jpg"
       }
     ],
@@ -48,42 +48,42 @@
         "id": "gpu-1",
         "name": "MSI GeForce GTX 1660 SUPER™ VENTUS XS OC 6GB",
         "description": "12GB GDDR6, Ray Tracing",
-        "price": 699.99,
+        "price": 12000,
         "image": "Sem2/MSI GeForce GTX 1660 SUPER™ VENTUS XS OC 6GB.jpg"
       },
       {
         "id": "gpu-2",
         "name": "GamePro Ultra",
         "description": "16GB GDDR6, 4K Gaming",
-        "price": 899.99,
+        "price": 34000,
         "image": "Sem2/MSI GeForce RTX™ 3050 GAMING X 8G.jpg"
       },
       {
         "id": "gpu-3",
         "name": "MSI GeForce RTX™ 3060 VENTUS 2X 12G OC",
         "description": "16GB GDDR6, 4K Gaming",
-        "price": 899.99,
+        "price": 23000,
         "image": "Sem2/MSI GeForce RTX™ 3060 VENTUS 2X 12G OC.jpg"
       },
       {
         "id": "gpu-4",
         "name": "ZOTAC GAMING GeForce GTX 1650 AMP Core GDDR6 4GB",
         "description": "16GB GDDR6, 4K Gaming",
-        "price": 899.99,
+        "price": 41000,
         "image": "Sem2/ZOTAC GAMING GeForce GTX 1650 AMP Core GDDR6 4GB.jpg"
       },
       {
         "id": "gpu-5",
         "name": "ASUS Cerberus GeForce GTX 1050 Ti",
         "description": "16GB GDDR6, 4K Gaming",
-        "price": 899.99,
+        "price": 11000,
         "image": "Sem2/ASUS Cerberus GeForce GTX 1050 Ti.jpg"
       },
       {
         "id": "gpu-6",
         "name": "ASUS TUF Gaming GeForce RTX 3060 V2 OC Edition",
         "description": "16GB GDDR6, 4K Gaming",
-        "price": 899.99,
+        "price": 9000,
         "image": "Sem2/ASUS TUF Gaming GeForce RTX 3060 V2 OC Edition.jpg"
       }
     ],
@@ -92,42 +92,42 @@
         "id": "mb-1",
         "name": "MSI B550M PRO-VDH WIFI",
         "description": "ATX, WiFi 6, PCIe 4.0",
-        "price": 199.99,
+        "price": 33000,
         "image": "Sem2/MSI B550M PRO-VDH WIFI.jpg"
       },
       {
         "id": "mb-2",
         "name": "MSI B560M PRO-VDH WIFI",
         "description": "ATX, Bluetooth 5.0, RGB",
-        "price": 249.99,
+        "price": 90000,
         "image": "Sem2/MSI B560M PRO-VDH WIFI.jpg"
       },
       {
         "id": "mb-3",
         "name": "MSI MPG B550 GAMING PLUS",
         "description": "Micro ATX, PCIe 4.0, WiFi 6",
-        "price": 179.99,
+        "price": 90000,
         "image": "Sem2/MSI MPG B550 GAMING PLUS.jpg"
       },
       {
         "id": "mb-4",
         "name": "MSI PRO B760M-E DDR4",
         "description": "Mini ITX, RGB, PCIe 4.0",
-        "price": 129.99,
+        "price": 12000,
         "image": "Sem2/MSI PRO B760M-E DDR4.jpg"
       },
       {
         "id": "mb-5",
         "name": "MSI PRO B760M-P DDR4",
         "description": "ATX, PCIe 4.0, WiFi 6",
-        "price": 299.99,
+        "price": 35000,
         "image": "Sem2/MSI PRO B760M-P DDR4.jpg"
       },
       {
         "id": "mb-6",
         "name": "ASUS PRIME B550M-K",
         "description": "ATX, PCIe 4.0, RGB",
-        "price": 249.99,
+        "price": 45000,
         "image": "Sem2/ASUS PRIME B550M-K.jpg"
       }
       
@@ -137,28 +137,28 @@
         "id": "ram-1",
         "name": "Patriot Signature Line DDR5 16GB 5600MHz Laptop RAM",
         "description": "DDR4, 3200MHz",
-        "price": 89.99,
+        "price": 23300,
         "image": "Sem2/Patriot Signature Line DDR5 16GB 5600MHz Laptop RAM.jpg"
       },
       {
         "id": "ram-2",
         "name": "PATRIOT VIPER STEEL RGB DDR4 16GB 3200MHz",
         "description": "DDR4, 3600MHz",
-        "price": 159.99,
+        "price": 42000,
         "image": "Sem2/PATRIOT VIPER STEEL RGB DDR4 16GB 3200MHz.jpg"
       },
       {
         "id": "ram-3",
         "name": "Patriot Viper Venom RGB DDR5 RAM 64GB (2X32GB)",
         "description": "DDR4, 3200MHz",
-        "price": 89.99,
+        "price": 140000,
         "image": "Sem2/Patriot Viper Venom RGB DDR5 RAM 64GB (2X32GB).jpg"
       },
       {
         "id": "ram-4",
         "name": "KINGSTON FURY BEAST RGB DDR4 16GB 3200MHz DIMM",
         "description": "DDR4, 3600MHz",
-        "price": 159.99,
+        "price": 10000,
         "image": "Sem2/KINGSTON FURY BEAST RGB DDR4 16GB 3200MHz DIMM.jpg"
       }
     ],
@@ -167,42 +167,42 @@
         "id": "storage-1",
         "name": "Samsung 990 PRO 2TB",
         "description": "SSD, NVMe, PCIe 4.0",
-        "price": 129.99,
+        "price": 5000,
         "image": "Sem2/Samsung 990 PRO 2TB.jpg"
       },
       {
         "id": "storage-2",
         "name": "Samsung 870 EVO 1TB",
         "description": "HDD, 7200RPM",
-        "price": 79.99,
+        "price": 1000,
         "image": "Sem2/Samsung 870 EVO 1TB.webp"
       },
       {
         "id": "storage-3",
         "name": "WD Blue 4TB",
         "description": "SSD, SATA III",
-        "price": 59.99,
+        "price": 5000,
         "image": "Sem2/WD Blue 4TB.jpg"
       },
       {
         "id": "storage-4",
         "name": "WD Black SN850X 1TB",
         "description": "SSD, NVMe, PCIe 3.0",
-        "price": 99.99,
+        "price": 2000,
         "image": "Sem2/WD Black SN850X 1TB.jpg"
       },
       {
         "id": "storage-5",
         "name": "Seagate FireCuda 530 1TB.webp",
         "description": "HDD, 5400RPM",
-        "price": 69.99,
+        "price": 1900,
         "image": "Sem2/Seagate FireCuda 530 1TB.webp"
       },
       {
         "id": "storage-6",
         "name": "ProSSD 1TB",
         "description": "SSD, NVMe, PCIe 4.0",
-        "price": 139.99,
+        "price": 3000,
         "image": "Sem2/Crucial P5 Plus 2TB.webp"
       }
     ]

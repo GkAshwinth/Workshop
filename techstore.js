@@ -41,7 +41,7 @@ function createProductCard(product) {
             <img src="${product.image}" alt="${product.name}" class="techstore_product_image">
             <h3 class="techstore_product_name">${product.name}</h3>
             <p class="techstore_product_description">${product.description}</p>
-            <p class="techstore_product_price">$${product.price}</p>
+            <p class="techstore_product_price">LKR ${product.price}</p>
             <div class="techstore_quantity_control">
                 <button class="techstore_quantity_btn minus">-</button>
                 <input type="number" class="techstore_quantity_input" value="0" min="0">
@@ -119,14 +119,15 @@ function updateCartDisplay(items, total) {
         <tr>
             <td>${item.name}</td>
             <td>${item.quantity}</td>
-            <td>$${item.price.toFixed(2)}</td>
-            <td>$${item.total.toFixed(2)}</td>
+            <td>LKR ${item.price.toFixed(2)}</td>
+            <td>LKR ${item.total.toFixed(2)}</td>
         </tr>
     `).join('');
     
     cartCount.textContent = items.reduce((sum, item) => sum + item.quantity, 0);
-    cartTotal.textContent = total.toFixed(2);
-    cartTableTotal.textContent = `$${total.toFixed(2)}`;
+    cartTotal.textContent = `LKR ${total.toFixed(2)}`; 
+    cartTableTotal.textContent = `LKR ${total.toFixed(2)}`;
+    
 }
 
 // Save cart as favorites
@@ -161,7 +162,9 @@ function proceedToCheckout() {
         const quantity = parseInt(card.querySelector('.techstore_quantity_input').value) || 0;
         if (quantity > 0) {
             const name = card.querySelector('.techstore_product_name').textContent;
-            const price = parseFloat(card.querySelector('.techstore_product_price').textContent.replace('$', ''));
+            const priceText = card.querySelector('.techstore_product_price').textContent;
+            const price = parseFloat(priceText.replace(/[^\d.]/g, ''));
+
             const itemTotal = price * quantity;
             total += itemTotal;
             

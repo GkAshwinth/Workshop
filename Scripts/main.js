@@ -16,11 +16,11 @@ window.addEventListener('DOMContentLoaded', () => {
             card.className = 'product-card';
 
             card.innerHTML = `
-                <img src="${product.img}" alt="${product.name}" class="product-img">
-                <h3>${product.name}</h3>
-                <p>$${product.price.toFixed(2)}</p>
-                <input type="number" min="0" value="0" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}">
-            `;
+            <img src="${product.img}" alt="${product.name}" class="product-img">
+            <h3>${product.name}</h3>
+            <p>LKR ${product.price.toFixed(2)}</p>
+            <input type="number" min="0" value="0" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}">
+        `;
             wrapper.appendChild(card);
         });
 
