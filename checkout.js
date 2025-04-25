@@ -5,6 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Handle form submission
     document.getElementById('checkoutForm').addEventListener('submit', handleCheckout);
+
+    // Handle "Go Back to Store" button click
+    document.getElementById('goBackToStore').addEventListener('click', () => {
+        window.location.href = 'store.html';
+    });
 });
 
 function displayCheckoutItems(data) {
@@ -13,7 +18,7 @@ function displayCheckoutItems(data) {
 
     console.log("Checkout data:", data);
 
-    if (data.items && data.items.length > 0) {
+    if (data.items && Array.isArray(data.items) && data.items.length > 0) {
         container.innerHTML = data.items.map(item => `
             <div class="checkout_item">
                 <p>${item.name} x ${item.quantity}</p>
@@ -24,6 +29,7 @@ function displayCheckoutItems(data) {
         const total = parseFloat(data.total);
         totalElement.textContent = isNaN(total) ? 'LKR 0.00' : `LKR ${total.toFixed(2)}`;
     } else {
+        // If no items, redirect to store page
         window.location.href = 'store.html';
     }
 }
@@ -46,7 +52,7 @@ function handleCheckout(event) {
     const modal = document.getElementById('confirmationModal');
     modal.style.display = 'flex';
 
-    // Clear cart data
+    // Clear cart data after successful checkout
     localStorage.removeItem('techstore_checkout');
 }
 
